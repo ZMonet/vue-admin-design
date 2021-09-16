@@ -1,11 +1,11 @@
 {
   "name": "vue-admin-design",
   "version": "2.0.0",
-  "description": "基于vue + elementUI的管理系统模板",
-  "author": "baimingxuan <354372738@qq.com>",
+  "description": "木门综合服务平台",
+  "author": "zjxian",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
@@ -21,6 +21,7 @@
     "less-loader": "^5.0.0",
     "lodash": "^4.17.20",
     "mavon-editor": "^2.9.0",
+    "qs": "^6.10.1",
     "screenfull": "^5.0.2",
     "v-org-tree": "^1.0.12",
     "vg-editor": "^2.7.2",

@@ -39,7 +39,6 @@
 </template>
 
 <script>
-import { getUserInfo } from '../api/login'
 
 export default {
   name: 'UserCenter',
@@ -49,9 +48,7 @@ export default {
     }
   },
   created() {
-    getUserInfo().then(res => {
-      this.userInfo = res
-    })
+    // 获取用户信息
   }
 }
 </script>

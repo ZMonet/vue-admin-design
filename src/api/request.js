@@ -1,11 +1,11 @@
 import axois from 'axios'
 import { Message } from 'element-ui'
-import { getToken } from './utils/cookie'
+import { getToken } from '@/utils/cookie'
 
 // 创建axios实例
 const service = axois.create({
-  baseURL: process.env.VUE_APP_BASE_API, // api 的 base_url
-  timeout: 120000 // 请求超时时间
+  baseURL: process.env.VUE_APP_BASE_API, // .env.xxx 文件中的地址
+  timeout: 120000 // 求超时时间
 })
 
 // request拦截器设置

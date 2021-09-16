@@ -13,7 +13,7 @@
 
 <script>
 import Avatar from '../../assets/img/avatar.png'
-import { removeToken } from '../../utils/cookie'
+import { removeToken } from '@/utils/cookie'
 
 export default {
   name: 'UserAvatar',
@@ -47,7 +47,7 @@ export default {
 
 <style lang="less">
 .user-avatar-wrapper {
-  float: left;
+  float: right;
   width: 48px;
   padding: 3px 0 3px 20px;
   margin-left: 20px;

@@ -178,7 +178,7 @@
 </template>
 
 <script>
-import { getTableList } from '../../api'
+import { getTableList } from '../../api/api'
 import excel from '../../utils/excel'
 import Pagination from '../../components/Pagination'
 import Upload from '../../components/Upload'

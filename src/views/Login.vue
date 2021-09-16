@@ -27,9 +27,10 @@
 </template>
 
 <script>
-import { login } from '../api/login'
+
 import { setToken } from '../utils/cookie'
 import Background from '../assets/img/login-background.jpg'
+import { postJsonRequest } from '@/api/api'
 
 export default {
   name: 'Login',
@@ -66,7 +67,7 @@ export default {
         }
         if (valid) {
           this.loading = true
-          login(data).then(res => {
+          postJsonRequest('/user/login', data).then(res => {
             this.loading = false
             setToken(res.token)
             this.$router.push({ path: this.redirect || '/' })
