@@ -2,7 +2,7 @@
   <div class="user-center-wrapper clear-fix">
     <el-card shadow="always" :body-style="{padding: '50px'}">
       <div class="user-avatar">
-        <img src="../assets/img/avatar.png" alt="avatar">
+        <img src="../assets/img/head.jpg" alt="avatar">
       </div>
       <ul class="user-info">
         <li>

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Avatar from '../../assets/img/avatar.png'
+import Avatar from '../../assets/img/head.jpg'
 import { removeToken } from '@/utils/cookie'
 
 export default {

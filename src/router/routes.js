@@ -11,93 +11,57 @@ import Layout from '../layout'
 
 export const asyncRoutes = [
   {
-    path: '/form-table',
-    name: 'FormTable',
+    path: '/user',
+    name: 'User',
     component: Layout,
-    redirect: '/form-table/table-classic',
+    redirect: '/user/role-manage',
     meta: {
-      title: '表格&表单',
+      title: '用户角色管理',
       icon: 'vue-dsn-icon-biaoge'
     },
     children: [
       {
-        path: 'table-classic',
-        name: 'TableClassic',
-        component: () => import('../views/form-table/TableClassic'),
+        path: 'role-manage',
+        name: 'roleManage',
+        component: () => import('../views/userManage/FormList'),
         meta: {
-          title: '综合表格'
+          title: '角色管理'
         }
       },
       {
-        path: 'form-list',
-        name: 'FormList',
-        component: () => import('../views/form-table/FormList'),
+        path: 'user-manage',
+        name: 'userManage',
+        component: () => import('../views/userManage/FormList'),
         meta: {
-          title: '表单列表'
-        }
-      },
-      {
-        path: 'table-inline-edit',
-        name: 'TableInlineEdit',
-        component: () => import('../views/form-table/TableInlineEdit'),
-        meta: {
-          title: '行内编辑表格'
+          title: '用户管理'
         }
       }
     ]
   },
   {
-    path: '/tree',
-    name: 'Tree',
+    path: '/task',
+    name: 'Task',
     component: Layout,
-    redirect: '/tree/org-tree',
+    redirect: '/task/list',
     meta: {
-      title: '树形结构',
-      icon: 'vue-dsn-icon-shuxing'
+      title: '任务查询',
+      icon: 'vue-dsn-icon-biaoge'
     },
     children: [
       {
-        path: 'org-tree',
-        name: 'OrgTree',
-        component: () => import('../views/tree/OrgTree'),
+        path: 'list',
+        name: 'TaskList',
+        component: () => import('../views/taskList/FormList'),
         meta: {
-          title: '组织树'
+          title: '任务队列'
         }
       },
       {
-        path: 'ele-tree',
-        name: 'EleTree',
-        component: () => import('../views/tree/EleTree'),
+        path: 'order-bom',
+        name: 'orderBom',
+        component: () => import('../views/taskList/FormList'),
         meta: {
-          title: '控件树'
-        }
-      }
-    ]
-  },
-  {
-    path: '/excel',
-    name: 'Excel',
-    component: Layout,
-    redirect: '/excel/export-excel',
-    meta: {
-      title: 'Excel',
-      icon: 'vue-dsn-icon-excel'
-    },
-    children: [
-      {
-        path: 'export-excel',
-        name: 'ExportExcel',
-        component: () => import('../views/excel/ExportExcel'),
-        meta: {
-          title: '导出Excel'
-        }
-      },
-      {
-        path: 'import-excel',
-        name: 'ImportExcel',
-        component: () => import('../views/excel/ImportExcel'),
-        meta: {
-          title: '导入Excel'
+          title: '订单BOM'
         }
       }
     ]
