@@ -149,3 +149,50 @@ export function calcImageSize(imageTrueW, imageTrueH, showAreaW, showAreaH) {
     ratio
   }
 }
+
+/**
+ * 获取缓存
+ * @param key
+ * @returns {string}
+ */
+export function getStorage(key) {
+  return localStorage.getItem(key)
+}
+
+/**
+ * 设置缓存
+ * @param key
+ * @param value
+ */
+export function setStorage(key, value) {
+  return localStorage.setItem(key, value)
+}
+
+/**
+ * 删除缓存
+ * @param keys
+ */
+export function removeStorage(keys) {
+  return localStorage.removeItem(keys)
+}
+
+/**
+ * 清空缓存
+ */
+export function clearStorage() {
+  return localStorage.clear()
+}
+
+/**
+ * 获取token
+ */
+export function getToken() {
+  return localStorage.getItem('ACCESS_TOKEN')
+}
+
+/**
+ * 删除token
+ */
+export function removeToken() {
+  return localStorage.removeItem('ACCESS_TOKEN')
+}

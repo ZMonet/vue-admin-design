@@ -28,9 +28,9 @@
 
 <script>
 
-import { setToken } from '../utils/cookie'
+import { setStorage } from '@/utils'
 import Background from '../assets/img/login-background.jpg'
-import { postJsonRequest } from '@/api/api'
+import { postRequest } from '@/api/api'
 
 export default {
   name: 'Login',
@@ -38,8 +38,8 @@ export default {
     return {
       Background,
       loginForm: {
-        username: 'admin',
-        password: 'admin123',
+        username: 'zengjunxian',
+        password: '34115205',
         rememberMe: true
       },
       loginRules: {
@@ -67,9 +67,10 @@ export default {
         }
         if (valid) {
           this.loading = true
-          postJsonRequest('/user/login', data).then(res => {
+          postRequest('/oauth/login', data).then(res => {
             this.loading = false
-            setToken(res.token)
+            setStorage('ACCESS_TOKEN', res.token)
+            setStorage('USER_INFO', JSON.stringify(res))
             this.$router.push({ path: this.redirect || '/' })
           }).catch(() => {
             this.loading = false

@@ -1,6 +1,6 @@
 import axois from 'axios'
 import { Message } from 'element-ui'
-import { getToken } from '@/utils/cookie'
+import { getToken } from '@/utils'
 
 // 创建axios实例
 const service = axois.create({
@@ -14,7 +14,7 @@ service.interceptors.request.use(
     if (getToken()) {
       config.headers['Authorization'] = 'Bearer ' + getToken() // 请求头设置自带 token
     }
-    config.headers['Content-Type'] = 'application/json' // 请求的数据格式为 json
+    // config.headers['Content-Type'] = 'application/json' // 请求的数据格式为 json
     return config
   },
   error => {
@@ -29,7 +29,7 @@ service.interceptors.response.use(
     const data = response.data
     const code = data.code
     const message = data.msg
-    if (code === 0) {
+    if (code === 200) {
       return data.data
     } else {
       Message({

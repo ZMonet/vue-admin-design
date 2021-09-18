@@ -28,7 +28,7 @@ import HeaderBar from './components/HeaderBar/index'
 import SideMenu from './components/SideMenu/index'
 import TagsNav from './components/TagsView/index'
 import MainView from './components/MainView/index'
-import Logo from '../assets/img/logo.png'
+import Logo from '../assets/img/door.png'
 import LogoIcon from '../assets/img/logo-icon.png'
 
 const RESIZE_WIDTH = 1440

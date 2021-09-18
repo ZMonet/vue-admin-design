@@ -17,7 +17,7 @@ export const asyncRoutes = [
     redirect: '/user/role-manage',
     meta: {
       title: '用户角色管理',
-      icon: 'vue-dsn-icon-biaoge'
+      icon: 'vue-dsn-icon-bianjiqi'
     },
     children: [
       {
@@ -62,6 +62,34 @@ export const asyncRoutes = [
         component: () => import('../views/taskList/FormList'),
         meta: {
           title: '订单BOM'
+        }
+      }
+    ]
+  },
+  {
+    path: '/special-bom',
+    name: 'specialBom',
+    component: Layout,
+    redirect: '/special-bom/door-leaf',
+    meta: {
+      title: '特殊BOM管理',
+      icon: 'vue-dsn-icon-biaoge'
+    },
+    children: [
+      {
+        path: 'door-leaf',
+        name: 'doorLeaf',
+        component: () => import('../views/specialBomManage/SpecialDoorLeaf'),
+        meta: {
+          title: '特殊门扇BOM配置'
+        }
+      },
+      {
+        path: 'door-pocket',
+        name: 'doorPocket',
+        component: () => import('../views/specialBomManage/SpecialDoorLeaf'),
+        meta: {
+          title: '特殊门套BOM配置'
         }
       }
     ]
